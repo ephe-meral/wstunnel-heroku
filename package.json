@@ -1,0 +1,20 @@
+{
+  "name": "wstunnel-heroku",
+  "version": "0.1.0",
+  "description": "Installs wstunnel and starts it on a heroku instance.",
+  "main": "index.js",
+  "scripts": {
+    "start": "wstunnel -s $PORT"
+  },
+  "dependencies": {
+    "wstunnel": "~1.0.x"
+  },
+  "engines": {
+    "node": "0.10.x"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ephe-meral/wstunnel-heroku"
+  },
+  "license": "WTFPL"
+}
