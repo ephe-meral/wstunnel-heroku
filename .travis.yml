@@ -1,10 +1,10 @@
 language: node_js
 sudo: false
 node_js:
-  - "0.10"
+- '0.10'
 deploy:
   provider: heroku
   strategy: git
   api_key:
-    secure: HSDMAqUCQDuOdY9RxFYRb0fMYiEW9RPN63/GO/TJKc9GYjOV3uOD6JRCDhIx+tFIrh+UIbjO6P1cM7sGELYcbGtMrMAIvYP5mC+782qgMK7703q6pYoDRNvDFa161heVZqUehHw2PYHwJGucJqr6O8e9aQ8zKEYfhMPt1E0tBsM=
+    secure: glSZZ6WIydn2WktQnSPT3qBM5+wGKpxON7BWEz37IPXUt/mzhVc/j6RUrKbKo/rE/dyHd6ileIF8hQCu4GKrg23IpI/2EfZHSVxz7eQAPhANXy1jRJMlZcvefbu74ALhSRKTJPKEzxVEBwAoHW+6MEA3rvJZYPpvaq8Wu0bDvg0=
   app: wstunnel
