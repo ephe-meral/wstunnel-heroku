@@ -4,22 +4,31 @@ Deploys [this](https://www.npmjs.com/package/wstunnel) to a heroku instance, and
 
 ---
 
-- Install Node.js then fork this repo and clone it locally.
-- Option 1: The manual Heroku way<br>
-Create a new heroku app and push the repo: (heroku toolbelt required)
+**Requires:**
+- [git](http://git-scm.com/)
+- [ssh](http://www.openssh.com/)
+- [node.js](https://nodejs.org/)
+- [heroku-toolbelt](https://devcenter.heroku.com/articles/heroku-command)
+- optionally: [travis-gem](https://rubygems.org/gems/travis)
+
+**Setup:**
+- Clone this repo (Optionally fork it if you want continuous deployment w/ travis)
+- Create a new heroku app and push the repo
 ```shell
 heroku create
+heroku config:add BUILDPACK_URL=https://github.com/ddollar/heroku-buildpack-multi.git
 git push heroku master
 ```
-- Option 2: The Travis way<br>
-Init the deploy script, then push the changes to your fork: (heroku toolbelt & travis gem required, you need to activate travis for your repo first, or manually push to your heroku app)
+- Wait for Heroku to start the app, then run the client
+```shell
+npm install wstunnel -g
+wstunnel -t 8080:google.com:80 ws://your-app.herokuapp.com:80
+```
+
+**Travis continuous deployment goodness:**
+- Init the deploy script, then push the changes to your fork: (you need to activate travis for your repo first)
 ```shell
 travis encrypt $(heroku auth:token) --add deploy.api_key
 git commit -am 'changed heroku api key'
 git push
-```
-- Wait for travis to deploy, then run the client: (node.js required)
-```shell
-npm install wstunnel -g
-wstunnel -t 8080:google.com:80 ws://your-app.herokuapp.com:80
 ```
