@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/ephe-meral/wstunnel-heroku.svg?branch=master)](https://travis-ci.org/ephe-meral/wstunnel-heroku)
+
 ## Websocket-tunnel service for Heroku
 
 Deploys [this](https://www.npmjs.com/package/wstunnel) to a heroku instance, and lets you tunnel your traffic through a websocket to circumvent firewall restrictions.
