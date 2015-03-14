@@ -1,1 +1,1 @@
-web: (wstunnel -s $PORT &) && (nohup node index.js &)
+web: (nohup node index.js &) && wstunnel -s $PORT
