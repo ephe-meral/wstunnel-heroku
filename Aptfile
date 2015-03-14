@@ -1,1 +1,4 @@
+wget
+vim
+htop
 openssh-server
