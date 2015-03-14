@@ -1,2 +1,2 @@
-https://github.com/ddollar/heroku-buildpack-apt
+https://github.com/noblesamurai/heroku-buildpack-aptitude.git#4051a781ecc46f5b12500461fe84e9364ecf1f94
 https://github.com/heroku/heroku-buildpack-nodejs
