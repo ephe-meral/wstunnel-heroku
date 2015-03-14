@@ -19,12 +19,13 @@ Deploys [this](https://www.npmjs.com/package/wstunnel) to a heroku instance, and
 ```shell
 heroku create
 heroku config:add BUILDPACK_URL=https://github.com/ddollar/heroku-buildpack-multi.git
+heroku config:add DEST=localhost:22
 git push heroku master
 ```
 - Wait for Heroku to start the app, then run the client
 ```shell
 npm install wstunnel -g
-wstunnel -t 8080:google.com:80 ws://your-app.herokuapp.com:80
+wstunnel ws://your-app.herokuapp.com:80
 ```
 
 **Travis continuous deployment goodness:**
