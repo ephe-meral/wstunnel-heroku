@@ -4,7 +4,7 @@
   "description": "Installs wstunnel and starts it on a heroku instance.",
   "main": "index.js",
   "scripts": {
-    "start": "wstunnel -s $PORT"
+    "start": "wstunnel -s $PORT -t $DEST"
   },
   "dependencies": {
     "wstunnel": "~1.0.x"
